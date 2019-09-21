@@ -4,7 +4,7 @@ import { listRequest, listSuccess, listFailure } from "./actions";
 
 const result = handleActions(
   {
-    [listRequest]: () => {},
+    [listRequest]: () => null,
     [listSuccess]: (_state, action) => action.payload,
     [listFailure]: (_state, action) => action.payload
   },

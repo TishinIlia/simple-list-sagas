@@ -2,7 +2,7 @@ import { takeLatest, put, call, fork } from "redux-saga/effects";
 import { listRequest, listSuccess, listFailure } from "./actions";
 import { getList } from "./api";
 
-export function* fetchLoginForm(action) {
+export function* fetchListForm(action) {
   const queries = action.payload;
   try {
     const response = yield call(getList, queries);
@@ -13,7 +13,7 @@ export function* fetchLoginForm(action) {
 }
 
 function* fetchListWatcher() {
-  yield takeLatest(listRequest, fetchLoginForm);
+  yield takeLatest(listRequest, fetchListForm);
 }
 
 export default function*() {
