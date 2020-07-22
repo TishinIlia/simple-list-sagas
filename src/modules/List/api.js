@@ -1,4 +1,4 @@
-export const getList = form =>
-  fetch(`https://api.jsonbin.io/b/5b97f370db948c68635f6dbc`).then(response =>
+export const getList = () =>
+  fetch(`https://api.jsonbin.io/b/5f179697918061662846684b/1`).then(response =>
     response.json()
   );
